@@ -1,0 +1,93 @@
+$header-font: 'Droid Serif', serif
+$base-font: 'Raleway', sans-serif
+$main-color: #ac752f
+
+.articles
+	padding: 100px 0
+	h2 
+		color: $main-color
+		position: relative
+		font:
+			family: $header-font
+			size: 2.5rem
+		text-align: center 
+		padding-bottom: 10px
+		margin-bottom: 80px
+
+		&::after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 40%
+			transform: translate(-40%, 0)
+			width: 10%
+			height: 2px 
+			background: $main-color	
+
+	.list-of-articles 
+		display: flex
+		flex-direction: row 
+		flex-wrap: nowrap
+		justify-content: space-between 
+		align-items: center
+
+		li 
+			width: 33%
+			box-sizing: border-box
+
+			&:nth-child(1)
+				padding-right: 25px
+
+			&:nth-child(2)
+				padding: 0 25px
+
+			&:nth-child(3)
+				padding-left: 25px		
+
+			&:nth-child(2)
+				position: relative
+				transform: translate(0, 50px)	
+
+			.img-wrapper 
+				position: relative
+				width: 250px
+				float: right
+				margin-bottom: 50px
+
+				img 
+					box-shadow: 0 0 50px #000
+
+				&::before 
+					content: ""
+					position: absolute
+					top: -20px 
+					left: -20px 
+					background: #333
+					width: 250px 
+					height: 175px
+					z-index: -1
+
+			h3 		
+				color: $main-color
+				font: 
+					family: $header-font
+					size: 1.5rem 
+				border-bottom: 1px solid $main-color
+				padding-top: 30px
+				padding-bottom: 10px
+
+			p 
+				padding: 30px 0		
+	
+			.button 
+				border: none 
+				padding-left: 0
+				position: relative
+
+				&::after 
+					content: ">"
+					position: absolute
+					right: -15px
+					top: 50%
+					transform: translate(0, -50%)
+					color: $main-color

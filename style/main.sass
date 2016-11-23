@@ -1,0 +1,93 @@
+$header-font: 'Droid Serif', serif
+$base-font: 'Raleway', sans-serif
+$main-color: #ac752f
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6, img, p 
+	margin: 0
+	padding: 0
+	color: #fff
+	font:
+		family: 'Raleway', Arial, Helvetica, sans-serif
+
+body 
+	font:
+		size: 14px
+	background: #1d1d1d url("../images/bg-image.jpg") no-repeat center top
+	background-size: cover
+
+body::-webkit-scrollbar
+	width: 1em
+
+ 
+body::-webkit-scrollbar-track 
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
+ 
+body::-webkit-scrollbar-thumb 
+	background-color: $main-color
+	outline: 1px solid $main-color
+	border-radius: 10px
+
+
+a 
+	text-decoration: none
+
+.button
+	color: $main-color
+	display: inline-block
+	box-sizing: border-box
+	border: 1px solid #6b4922
+	padding: 10px 20px
+	font: 
+		family: $base-font
+		size: 1.1rem
+		weight: 700
+	text-transform: uppercase	
+	margin-top: 10px	
+	transition: color .3s ease-in-out 
+
+	&:hover 
+		color: #fff
+
+
+ul 
+	list-style-type: none	
+
+header, section, article, footer 
+	display: block
+
+img 
+	display: block 
+	max-width: 100%	
+
+p 
+	line-height: 1.5	
+
+.container
+	max-width: 990px
+	margin: 0 auto
+
+/* clearfix */
+.clearfix:after 
+	visibility: hidden
+	display: block
+	font-size: 0
+	content: " "
+	clear: both
+	height: 0
+
+.clearfix 
+	display: inline-block
+/* start commented backslash hack \*/
+* html .clearfix
+	height: 1%
+.clearfix
+	display: block
+/* close commented backslash hack */	
+
+@import header 
+@import about
+@import articles 
+@import gallery
+@import footer	
+@import media

@@ -1,0 +1,60 @@
+$header-font: 'Droid Serif', serif
+$base-font: 'Raleway', sans-serif
+$main-color: #ac752f
+
+
+.gallery
+	padding: 100px 0
+	text-align: center
+	.gallery-title 
+		color: $main-color
+		position: relative
+		font:
+			family: $header-font
+			size: 2.5rem
+		text-align: left 
+		padding-bottom: 10px
+		padding-left: 40px
+		margin-bottom: 80px
+
+		&::after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 40px
+			width: 10%
+			height: 2px 
+			background: $main-color	
+
+	.gallery-container 
+		display: flex 
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		.col-1-2, .col-2-2
+			display: flex
+		.col-1-2 div, .col-2-2 div 
+			margin: 10px	
+		.col-1-2 
+			width: 30%
+			flex-direction: column
+			justify-content: center
+			align-items: flex-end
+		.col-2-2 
+			width: 70%
+			flex-direction: row 
+			flex-wrap: wrap 
+			justify-content: flex-start
+			align-items: flex-start	
+		.img-box-4
+			align-self: flex-end	
+		.img-box-1 
+			width: 80%			
+		.img-box-3, .img-box-6, .img-box-4, .img-box-7
+			width: 40%
+		.img-box-5 
+			width: 100%		
+
+		[class^="img-box"]
+			box-shadow: 0 0 50px #000
+	

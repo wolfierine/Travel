@@ -1,0 +1,94 @@
+$header-font: 'Droid Serif', serif
+$base-font: 'Raleway', sans-serif
+$main-color: #ac752f
+
+footer
+	padding: 100px 0
+	position: relative
+	box-sizing: border-box
+	.footer-body 	
+		background: #373737
+		box-shadow: 0 0 100px #000
+		padding: 50px 0
+		.books-img
+			width: 380px
+			position: absolute
+			top: 10%
+			left: 5%
+			box-shadow: 0 0 30px #000
+		.footer-content
+			float: right 
+			width: 50%
+
+
+		h2 
+			color: $main-color
+			position: relative
+			font:
+				family: $header-font
+				size: 2.5rem
+			text-align: left 
+			padding-bottom: 10px
+			margin-bottom: 40px
+
+			&::after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 10%
+				height: 2px 
+				background: $main-color	
+
+		#contact-form 
+			.contact-group 
+				padding-bottom: 10px
+				box-sizing: border-box
+				input
+					display: inline-block
+					box-sizing: border-box
+					width: 40%
+
+					&:first-child 
+						margin-right: 10%
+			input, textarea
+				display: block	
+				border: 0
+				outline: 0
+				background: transparent	
+				padding-bottom: 15px
+				border-bottom: 1px solid #737373
+				font: 
+					family: $base-font
+					size: 1.1rem
+				color: #fff
+
+			input:focus, textarea:focus 
+				color: #fff	
+				border-bottom-color: $main-color	
+			textarea
+				max-width: 90%
+				min-width: 90%		
+			input[type="submit"]
+				border: 1px solid #6b4922	
+				margin-top: 30px
+				color: $main-color
+				transition: all .3s ease-in-out
+
+				&:hover, &:focus
+					cursor: pointer
+					color: #fff
+
+	.social-media  
+		padding: 100px 0 50px 0 
+		text-align: center
+		a 
+			color: $main-color
+			border: 1px solid $main-color
+			padding: 10px 15px	
+			display: inline-block 
+			margin: 0 10px 
+			transition: color .3s ease-in-out
+
+			&:hover 
+				color: #fff	

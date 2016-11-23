@@ -1,0 +1,108 @@
+$main-color: #ac752f
+$header-font: 'Droid Serif', serif
+$base-font: 'Raleway', sans-serif
+
+header 
+	height: 100vh
+	position: relative
+	padding-top: 100px
+
+	nav 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		width: 100%
+		background: transparent
+		text-align: center
+		transition: all .5s ease-in-out
+
+		&.active 
+			position: fixed 
+			top: 0
+			left: 0
+			width: 100%
+			background: rgba(0,0,0,.7)
+			z-index: 999
+
+		.hamburger 
+			position: fixed 
+			top: 0
+			right: 0
+			z-index: 999
+			margin: 5px
+			outline: 0
+			border: 4px solid $main-color
+			background: transparent
+			transition: all .3s ease-in-out
+			display: none
+
+			&:hover 	
+				cursor: pointer
+				border-color: transparent
+
+
+		
+		.page-nav 
+			li 
+				display: inline-block
+				position: relative
+				z-index: 999
+				&.active 
+					a 
+						color: #fff
+				a 
+					color: $main-color
+					display: block 
+					padding: 20px
+					font: 
+						family: $header-font
+						size: 1.2rem 
+						weight: 700
+					transition: all .3s ease-in-out
+					border-bottom: 2px solid transparent
+				
+					&:hover 
+						color: #fff
+						border-bottom: 2px solid $main-color
+
+	.hgroup
+		width: 50%
+		height: auto
+		margin: 0 auto
+		text-align: center
+		border: 5px solid $main-color
+		padding: 70px 0
+		box-sizing: border-box
+
+		h1 	
+			font:
+				family: $header-font
+				size: 8rem
+			letter-spacing: 2px	
+
+		h3, h4 
+			text-transform: uppercase
+			font: 
+				family: $base-font
+				size: 1.4rem
+				weight: 700	
+
+		h3 
+			color: $main-color	
+
+		h4 
+			position: relative
+			padding-bottom: 10px
+			z-index: -1
+
+			&::after 
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				width: 10%
+				height: 2px 
+				background: #fff 
+				margin: 0 auto			
